@@ -30,8 +30,8 @@ SetupLogging=yes
 Source: "{#BootstrapExe}"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{autoprograms}\Lumo Code"; Filename: "{app}\LumoBootstrap.exe"; Parameters: "--launch"; WorkingDir: "{userprofile}\workspace"
-Name: "{autodesktop}\Lumo Code"; Filename: "{app}\LumoBootstrap.exe"; Parameters: "--launch"; WorkingDir: "{userprofile}\workspace"; Tasks: desktopicon
+Name: "{autoprograms}\Lumo Code"; Filename: "{app}\LumoBootstrap.exe"; Parameters: "--launch"
+Name: "{autodesktop}\Lumo Code"; Filename: "{app}\LumoBootstrap.exe"; Parameters: "--launch"; Tasks: desktopicon
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional shortcuts:"; Flags: unchecked

@@ -41,5 +41,10 @@ class SafeExtractZipTests(unittest.TestCase):
                 safe_extract_zip(archive, tmp / "out", strip_first_component=True)
 
 
+    def test_inno_shortcuts_do_not_use_unsupported_userprofile_constant(self):
+        installer_script = Path(__file__).with_name("LumoCode.iss").read_text()
+        self.assertNotIn("{userprofile}", installer_script.lower())
+
+
 if __name__ == "__main__":
     unittest.main()
