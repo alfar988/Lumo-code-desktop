@@ -1,0 +1,280 @@
+{
+  "templates": {
+    "game-2d": {
+      "file": "game-2d.html",
+      "default_path": "index.html",
+      "desc": "complete 2D arcade engine (canvas, touch joystick + keyboard + dash, sound, particles, combo, difficulty ramp, menus) with a playable demo",
+      "vars": {
+        "TITLE": "Orb Rush",
+        "ACCENT": "#35c48f",
+        "LANG": "en"
+      },
+      "guide": "Keep the engine (loop, input, sound, overlay, HUD plumbing). Replace the content: the world, the art, the rules.",
+      "min_novelty": 0.32,
+      "customize": [
+        "Make it the game the user described: theme, entities, goal and rules come from the request. Remove template mechanics that do not belong; add only mechanics the request names or clearly implies.",
+        "Redraw every entity with art that fits the theme (canvas paths, not plain circles) and give the field a matching background.",
+        "Rework the menu, HUD and game-over screen to match the theme: real title, real instructions in the user's language, theme colors and typography.",
+        "Give each event that exists in the game a sound and a visual response (floating score text, small particles) tuned to the theme.",
+        "Check the first frame in portrait and landscape: the playfield, the player and the HUD are visible and readable at start."
+      ]
+    },
+    "game-3d": {
+      "file": "game-3d.html",
+      "default_path": "index.html",
+      "desc": "complete Three.js r128 arena game (follow camera, joystick + keyboard, gems, chasers, particles, menus)",
+      "vars": {
+        "TITLE": "Gem Arena",
+        "ACCENT": "#35c48f",
+        "LANG": "en"
+      },
+      "guide": "Keep the engine (renderer, camera, input, states). Replace the world, the models and the rules.",
+      "min_novelty": 0.32,
+      "customize": [
+        "Make it the game the user described: theme, goal and rules come from the request. Remove template mechanics that do not belong; add only mechanics the request names or clearly implies.",
+        "Build themed models from grouped primitives for the player, collectibles and enemies (not plain spheres), and give the world props, sky or fog that fit the theme.",
+        "Rework the menu, HUD and game-over screen to match the theme, with real instructions and a title treatment.",
+        "Add particles and camera feedback for the events that exist in the game (collect, hit, win, lose).",
+        "Keep performance in check: shared geometries and materials, no allocation in update(), capped pixel ratio. Check the first frame: the player and the world are in front of the camera."
+      ]
+    },
+    "web-landing": {
+      "file": "web-landing.html",
+      "default_path": "index.html",
+      "desc": "responsive accessible one-page site (hero, features, steps, pricing, FAQ, contact form) with light and dark themes",
+      "vars": {
+        "TITLE": "Brand",
+        "TAGLINE": "A short, specific promise",
+        "DESCRIPTION": "One or two sentences that say what it is and who it is for.",
+        "ACCENT": "#1b6e50",
+        "LANG": "en"
+      },
+      "guide": "Keep the design tokens, accessibility and responsive behavior. Replace the identity, the content and the layout.",
+      "min_novelty": 0.5,
+      "customize": [
+        "Create a distinct brand identity: a palette beyond one accent (surface, ink, secondary tone), a deliberate type pairing or weights, and a shape language that fits the subject.",
+        "Replace EVERY placeholder with real, specific copy for the user's subject; remove sections that do not apply and add the ones the subject needs (gallery, timeline, comparison table, team, location, menu).",
+        "Design a custom hero visual with inline SVG or CSS illustration instead of the generic preview card.",
+        "Vary the layout from the template (split sections, bento grid, large type, alternating rows) while keeping the spacing tokens.",
+        "Keep interactions to what the page needs (a working form, menu or filter when the request involves one) and a footer with real links."
+      ]
+    },
+    "web-app": {
+      "file": "web-app.html",
+      "default_path": "index.html",
+      "desc": "single-file app shell (state/render, add/edit/delete with undo, filters, search, dialog, shortcuts, localStorage)",
+      "vars": {
+        "TITLE": "Taskboard",
+        "ACCENT": "#1b6e50",
+        "LANG": "en"
+      },
+      "guide": "Keep the state -> render -> events structure. Replace the domain, the fields and the views.",
+      "min_novelty": 0.35,
+      "customize": [
+        "Model the real domain: change the item fields, labels, validation and sample data to fit the request.",
+        "Implement every feature the user asked for completely (validation, empty state, persistence). Do not add features nobody asked for.",
+        "Give it a distinct look: its own palette, spacing and typography, better empty states and microcopy, not the starter's skin.",
+        "Make every action reachable by keyboard with accessible announcements, and persist new fields with a bumped storage version.",
+        "Handle errors visibly (invalid input, failed save) with clear messages."
+      ]
+    },
+    "dashboard": {
+      "file": "dashboard.html",
+      "default_path": "index.html",
+      "desc": "analytics dashboard (KPI cards with change vs previous period, inline-SVG line and bar charts with tooltip and text alternative, sortable/filterable/paginated table, CSV export, light and dark themes)",
+      "vars": {
+        "TITLE": "Sales dashboard",
+        "ACCENT": "#1b6e50",
+        "LANG": "en"
+      },
+      "guide": "Keep the data flow (data -> state -> compute -> render), the SVG chart helpers and the accessibility. Replace the data source, the metrics and the labels.",
+      "min_novelty": 0.35,
+      "customize": [
+        "Model the real domain: change the record fields, metric definitions, labels, currency and sample data to fit the request (or fetch() the user's API in place of makeOrders()).",
+        "Show the metrics and charts the user asked for; add a chart type or filter only when the request needs it.",
+        "Give it its own look: palette beyond one accent, type scale, card style and density; keep contrast and the 44px touch targets."
+      ]
+    },
+    "docs-site": {
+      "file": "docs-site.html",
+      "default_path": "index.html",
+      "desc": "documentation or knowledge-base site (sidebar, safe markdown renderer, search, table of contents with scroll spy, hash routing, copy buttons, themes, print styles)",
+      "vars": {
+        "TITLE": "Project documentation",
+        "ACCENT": "#1b6e50",
+        "LANG": "en"
+      },
+      "guide": "Keep the md() renderer (it escapes first), the router and the search. Replace the DOCS content, the identity and the layout.",
+      "min_novelty": 0.4,
+      "customize": [
+        "Write the real pages for the user's subject in the DOCS array: accurate, specific, with runnable code examples (no lorem ipsum, no placeholder pages).",
+        "Extend the renderer if the content needs it (tables, images with alt text, callouts) and keep every inserted string escaped.",
+        "Give it its own identity: brand colors, type pairing, header and sidebar style, a landing page with the main entry points."
+      ]
+    },
+    "api-python": {
+      "file": "api-python.py",
+      "default_path": "api.py",
+      "desc": "JSON REST API with the standard library and SQLite (migrations, validation, pagination, search, CORS, optional API key, graceful shutdown, built-in --selftest)",
+      "vars": {
+        "TITLE": "Items API",
+        "PORT": "8000"
+      },
+      "guide": "Keep the Handler, routing, error format and migrations. Replace the resource: schema, validate(), row(), Store and the routes. Run `python api.py --selftest` after every change.",
+      "min_novelty": 0.25,
+      "customize": [
+        "Rename the resource and fields to the user's domain (schema in MIGRATIONS, validate(), row(), Store methods, routes) and update the --selftest checks to match.",
+        "Implement the endpoints the user asked for (relations, filters, authentication or rate limiting only when requested) with a self-test for each.",
+        "Keep: parameterized SQL, input validation, one error format, request size limit. Document the routes in the file header."
+      ]
+    },
+    "api-node": {
+      "file": "api-node.js",
+      "default_path": "api.js",
+      "desc": "zero-dependency Node 18+ JSON REST API (JSON file store with atomic writes, validation, pagination, CORS, optional API key, built-in --selftest)",
+      "vars": {
+        "TITLE": "Items API",
+        "PORT": "8000"
+      },
+      "guide": "Keep the router, error handling and Store. Replace the resource: validate(), the routes and the fields. Run `node api.js --selftest` after every change.",
+      "min_novelty": 0.25,
+      "customize": [
+        "Rename the resource and fields to the user's domain (validate(), routes, Store) and update the --selftest checks to match.",
+        "Implement the endpoints the user asked for (relations, filters, authentication or rate limiting only when requested) with a self-test for each.",
+        "Keep: validation, one error format, body size limit, atomic saves. Document the routes in the file header."
+      ]
+    },
+    "cli-python": {
+      "file": "cli-python.py",
+      "default_path": "cli.py",
+      "desc": "command-line program with subcommands (argparse, exit codes, --json, stdin, atomic JSON storage, colors that respect NO_COLOR, embedded unit tests)",
+      "vars": {
+        "PROG": "tasks",
+        "TITLE": "A small task tracker for the terminal."
+      },
+      "guide": "Keep main(argv) returning an exit code, the error handling and the embedded tests. Replace the task domain, the subcommands and the output.",
+      "min_novelty": 0.25,
+      "customize": [
+        "Change the domain, fields and subcommands to what the user asked for, with help text and an example for each command.",
+        "Implement exactly the commands the user asked for, with tests for them in run_tests(). Do not add commands nobody asked for.",
+        "Keep: one-line errors on stderr, exit codes, --json output, no tracebacks for expected problems."
+      ]
+    },
+    "bot-telegram": {
+      "file": "bot-telegram.py",
+      "default_path": "bot.py",
+      "desc": "Telegram bot with long polling (testable command router, inline buttons, SQLite state, offset persistence, allow-list, rate-limit handling, built-in --selftest with a fake Telegram server)",
+      "vars": {
+        "TITLE": "Notes bot"
+      },
+      "guide": "Keep Api, Router, Store and poll_once. Replace the commands and the stored data. Run `python bot.py --selftest` after every change; the token comes from TELEGRAM_TOKEN.",
+      "min_novelty": 0.25,
+      "customize": [
+        "Replace the note commands with the features the user asked for, each with a help line, and add self-test checks for them.",
+        "Keep what makes the bot reliable. Do not add features nobody asked for.",
+        "Keep: token from the environment, one bad update never stops the bot, messages split under the length limit."
+      ]
+    },
+    "scraper-python": {
+      "file": "scraper-python.py",
+      "default_path": "scraper.py",
+      "desc": "polite web scraper (robots.txt, delay with jitter, retries with backoff, disk cache, pagination, CSV/JSON/JSONL output, built-in --selftest against a local fake site)",
+      "vars": {
+        "TITLE": "Quotes scraper",
+        "START_URL": "https://quotes.toscrape.com/"
+      },
+      "guide": "Keep Fetcher (robots.txt, delay, retries, cache) and crawl(). Replace parse_page(), next_page(), the fields and USER_AGENT for the target site. Run `python scraper.py --selftest` after every change.",
+      "min_novelty": 0.25,
+      "customize": [
+        "Rewrite parse_page() and next_page() for the target site's markup (or its JSON endpoint) and set a real USER_AGENT with contact details.",
+        "Implement the options the user asked for (several start URLs, de-duplication, a SQLite output, a filter) and extend the --selftest fake site to cover them.",
+        "Keep: robots.txt check, delay of one second or more, caching, a clear error when zero records are found."
+      ]
+    },
+    "game-puzzle": {
+      "file": "game-puzzle.html",
+      "default_path": "index.html",
+      "desc": "tile-merging puzzle on a grid (pure rules separate from drawing, swipe + keys + buttons, undo, best score per board size, 3x3 to 6x6, optional sound, reduced motion)",
+      "vars": {
+        "TITLE": "Merge Tiles",
+        "ACCENT": "#1b6e50",
+        "LANG": "en"
+      },
+      "guide": "Keep the grid state, history, input plumbing and the pure rule functions (slide, move, canMove). Replace the rules, the tile art and the theme.",
+      "min_novelty": 0.35,
+      "customize": [
+        "Change the puzzle to fit the request: the rules in slide()/move() (merge conditions, obstacles, goals), a theme for the tiles (shapes, icons or symbols drawn with SVG or canvas paths instead of plain numbers) and matching colors.",
+        "Add only the mechanics the request names or clearly implies (a shuffle, levels, a move limit); leave the rest out.",
+        "Keep the pure functions testable and update the checks in tests/dom_harness.js style if you change their signatures; keep touch targets at 44px and the reduced-motion rule."
+      ]
+    },
+    "game-snake": {
+      "file": "game-snake.html",
+      "default_path": "index.html",
+      "desc": "grid snake that speeds up as it grows (swipe, arrow keys, WASD, on-screen arrows, wall and self collision, best score)",
+      "vars": {
+        "TITLE": "Snake",
+        "ACCENT": "#3ddc97",
+        "LANG": "en"
+      },
+      "guide": "Keep the engine kit at the bottom of the script (canvas scaling, loop, input, HUD, overlay, best score, sound). Replace CONFIG, newState(), update() and draw() with your own food, theme and speed rules.",
+      "min_novelty": 0.3,
+      "customize": [
+        "Change the creature, the food and the board to the request (a worm, a train, a river of boats), with matching colors and a speed curve that suits it.",
+        "Add only the mechanics the request names or clearly implies; leave the rest out.",
+        "Keep the first-frame draw, the 44px touch targets, the pause when the page is hidden and the reduced-motion rule."
+      ]
+    },
+    "game-breakout": {
+      "file": "game-breakout.html",
+      "default_path": "index.html",
+      "desc": "paddle, ball and bricks (drag or keys, angle depends on where the ball hits the paddle, levels, three lives)",
+      "vars": {
+        "TITLE": "Brick Break",
+        "ACCENT": "#5ccfe6",
+        "LANG": "en"
+      },
+      "guide": "Keep the engine kit at the bottom of the script (canvas scaling, loop, input, HUD, overlay, best score, sound). Replace CONFIG, newState(), update() and draw() with your own brick layout, colors and power-ups.",
+      "min_novelty": 0.3,
+      "customize": [
+        "Change the bricks, the paddle and the ball to the request's theme (planks, bubbles, ice blocks) and set the layouts per level.",
+        "Add only the mechanics the request names or clearly implies; leave the rest out.",
+        "Keep the first-frame draw, the 44px touch targets, the pause when the page is hidden and the reduced-motion rule."
+      ]
+    },
+    "game-runner": {
+      "file": "game-runner.html",
+      "default_path": "index.html",
+      "desc": "endless runner with one-button jump (obstacles that speed up, distance score, parallax ground)",
+      "vars": {
+        "TITLE": "Sprint",
+        "ACCENT": "#ffb454",
+        "LANG": "en"
+      },
+      "guide": "Keep the engine kit at the bottom of the script (canvas scaling, loop, input, HUD, overlay, best score, sound). Replace CONFIG, newState(), update() and draw() with your own runner, obstacles and backdrop.",
+      "min_novelty": 0.3,
+      "customize": [
+        "Change the runner, the obstacles and the scenery to the request (a cat on rooftops, a rocket in an asteroid belt) and tune the speed curve.",
+        "Add only the mechanics the request names or clearly implies; leave the rest out.",
+        "Keep the first-frame draw, the 44px touch targets, the pause when the page is hidden and the reduced-motion rule."
+      ]
+    },
+    "game-flappy": {
+      "file": "game-flappy.html",
+      "default_path": "index.html",
+      "desc": "one-tap flyer through gaps in pipes (gravity, flap impulse, gap that stays fair, pass-by scoring)",
+      "vars": {
+        "TITLE": "Flap",
+        "ACCENT": "#ffd166",
+        "LANG": "en"
+      },
+      "guide": "Keep the engine kit at the bottom of the script (canvas scaling, loop, input, HUD, overlay, best score, sound). Replace CONFIG, newState(), update() and draw() with your own flyer, obstacles and theme.",
+      "min_novelty": 0.3,
+      "customize": [
+        "Change the flyer, the obstacles and the world to the request (a balloon between towers, a fish between reeds) and the colors to match.",
+        "Add only the mechanics the request names or clearly implies; leave the rest out.",
+        "Keep the first-frame draw, the 44px touch targets, the pause when the page is hidden and the reduced-motion rule."
+      ]
+    }
+  }
+}
